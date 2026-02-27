@@ -1,0 +1,204 @@
+:root{
+    --club-red: #dd1616;
+    --club-black: #000000;
+    --club-white: #ffffff;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar{
+    background-color: var(--club-red);
+    color: var(--club-white);
+}
+
+/* Footer ROJO CLARO */
+footer{
+    background-color: var(--club-red); 
+    color: var(--club-white);
+}
+
+/* Clases personalizadas */
+.text-club-red{
+    color: var(--club-red);
+}
+
+.text-club-white{
+    color: var(--club-white);
+}
+
+.text-club-black{
+    color: var(--club-black);
+}
+
+/*History*/
+.timeline-item{
+    border-left: 3px solid var(--club-black);
+    padding: 0 0 2rem 2rem;
+    position: relative;
+}
+
+.timeline-year{
+    font-weight: bold;
+    color: var(--club-red);
+}
+
+.timeline-item::before{
+    content: '';
+    left: -9px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--club-red);
+    position: absolute;
+}
+
+.navbar-brand img{
+    transition: 0.2s ease;
+}
+
+.navbar-brand:hover img{
+    transform: scale(1.1) rotate(5deg);
+}
+
+.nav-link{
+    color: var(--club-white);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.2s;
+    margin: 0 10px;
+}
+
+.nav-link::after{  
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--club-black);
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after{
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color: #000000;
+}
+
+/* ===== PLANTILLA ===== */
+
+.player-card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover{
+    transform: translateY(-5px);
+}
+
+.player-card img{
+    height: 280px;
+    object-fit: cover;
+}
+
+.position-badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--club-red);
+    color: var(--club-white);
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+/* ===== MATCH CARDS ===== */
+
+.match-card{
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.match-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.match-header{
+    background-color: var(--club-red);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.match-body{
+    padding: 20px;
+}
+
+.teams{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.vs{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.match-result{
+    text-align: center;
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.match-result.played{
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.match-result.upcoming{
+    background-color: #e2e3e5;
+    color: #6c757d;
+}
+
+.match-info{
+    font-size: 13px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.match-table img{
+    object-fit: contain;
+}
